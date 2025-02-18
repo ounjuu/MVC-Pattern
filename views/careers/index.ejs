@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <h1>커리어 index</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <th>커리어</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% allActor.forEach(career => { %>
+        <tr>
+          <td><%= career.userName %></td>
+          <td><%= career.age %></td>
+          <td><%= career.careers %></td>
+          <td><%= career.gender %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/careers/ca/girllist">여자</a></div>
+    <div><a href="/careers/ca/agelist">나이 30살 미만</a></div>
+    <div><a href="/careers/ca/actorlist">커리어: 배우</a></div>
+    <div><a href="/careers/ca/hanalist">이름 : 정하나</a></div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agelist</title>
+  </head>
+  <body>
+    <h1>커리어가 배우인 사람</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <th>커리어</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% actorList.forEach(actor => { %>
+        <tr>
+          <td><%= actor.userName %></td>
+          <td><%= actor.age %></td>
+          <td><%= actor.careers %></td>
+          <td><%= actor.gender %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/careers/">뒤로가기</a></div>
+  </body>
+</html>

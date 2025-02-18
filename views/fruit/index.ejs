@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruit index</title>
+  </head>
+  <body>
+    <h1>fruit</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>색깔</th>
+          <th>맛</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% fruitList.forEach(fruit => { %>
+        <tr>
+          <td><%= fruit.name %></td>
+          <td><%= fruit.color %></td>
+          <td><%= fruit.taste %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/fruit/fruittaste">taste가 달콤함인 것</a></div>
+    <div><a href="/fruit/fruitlength">이름이 세글자 인 것</a></div>
+    <div><a href="/fruit/fruitcolor">색깔이 주황인 것 찾기</a></div>
+    <div><a href="/fruit/fruitname">이름이 사과인 것 찾기</a></div>
+  </body>
+</html>

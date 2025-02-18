@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>칼로리가 300 이하인 것</title>
+  </head>
+  <body>
+    <h1>칼로리가 300 이하인 것</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>origin</th>
+          <th>타입</th>
+          <th>칼로리</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% calories.forEach(food => { %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.origin %></td>
+          <td><%= food.type %></td>
+          <td><%= food.calories %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/food/">뒤로가기</a></div>
+  </body>
+</html>

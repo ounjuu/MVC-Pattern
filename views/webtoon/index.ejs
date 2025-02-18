@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webtoon index</title>
+  </head>
+  <body>
+    <h1>webtoon</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>제목</th>
+          <th>작가</th>
+          <th>장르</th>
+          <th>에피소드</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% webtoonlist.forEach(web => { %>
+        <tr>
+          <td><%= web.title %></td>
+          <td><%= web.author %></td>
+          <td><%= web.genre %></td>
+          <td><%= web.episodes %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <div><a href="/webtoon/webtitlelen">제목이 네글자 이상인 것</a></div>
+    <div><a href="/webtoon/webepisodes">에피소드가 300 이상인 것</a></div>
+    <div><a href="/webtoon/webauthorname">작가 삭인 것</a></div>
+    <div><a href="/webtoon/webgenre">장르가 로맨스인 것 찾기</a></div>
+  </body>
+</html>

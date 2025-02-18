@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <th>커리어</th>
+          <th>성별</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% girlList.forEach(girl => { %>
+        <tr>
+          <td><%= girl.userName %></td>
+          <td><%= girl.age %></td>
+          <td><%= girl.careers %></td>
+          <td><%= girl.gender %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/careers/">뒤로가기</a></div>
+  </body>
+</html>

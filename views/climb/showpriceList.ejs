@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가격이 30000원 이상인 물품</title>
+  </head>
+  <body>
+    <h1>가격이 30000원 이상인 물품</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>브랜드</th>
+          <th>타입</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% priceList.forEach(climb => { %>
+        <tr>
+          <td><%= climb.name %></td>
+          <td><%= climb.brand %></td>
+          <td><%= climb.type %></td>
+          <td><%= climb.price %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/climb/">뒤로가기</a></div>
+  </body>
+</html>
