@@ -120,7 +120,7 @@
 
     // 성인
     const adult = data.filter((x) => x.age >= 19);
-    const adultNames = adult.map((x) => x.name).join("");
+    const adultNames = adult.map((x) => x.name).join(", ");
     const adultmap = adult
       .map((x) => {
         const careerdata3 = x.careers.map((y) => y.title).join(", ");
