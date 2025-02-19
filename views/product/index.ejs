@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+    <style>
+      td {
+        vertical-align: top; /* 셀의 내용을 위로 정렬 */
+        padding: 5px; /* 셀 간격을 조금 띄움 */
+        white-space: pre-line; /* 줄바꿈이 제대로 적용되도록 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>products</h1>
+    <% // users 테이블 생성 %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Users</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productData[0].users.forEach(user => { %>
+        <!-- users 배열을 순차적으로 처리 -->
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.age %></td>
+          <td><%= user.address %></td>
+          <td><%= user.isActive ? "Active" : "Inactive" %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <% // categories 테이블 생성 %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Categories</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productData[0].categories.forEach(category => { %>
+        <!-- categories 배열을 순차적으로 처리 -->
+        <tr>
+          <td><%= category.name %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <% // products 테이블 생성 %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productData[0].products.forEach(product => { %>
+        <!-- products 배열을 순차적으로 처리 -->
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+          <td><%= product.stock %></td>
+          <td><%= product.rating %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <% // orders 테이블 생성 %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Orders</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productData[0].orders.forEach(order => { %>
+        <!-- orders 배열을 순차적으로 처리 -->
+        <tr>
+          <td><%= order.orderId %></td>
+          <td><%= order.status %></td>
+          <td><%= order.totalAmount %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <% // payments 테이블 생성 %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Payments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productData[0].payments.forEach(payment => { %>
+        <!-- payments 배열을 순차적으로 처리 -->
+        <tr>
+          <td><%= payment.paymentId %></td>
+          <td><%= payment.method %></td>
+          <td><%= payment.status %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <% // reviews 테이블 생성 %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Reviews</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% productData[0].reviews.forEach(review => { %>
+        <!-- reviews 배열을 순차적으로 처리 -->
+        <tr>
+          <td><%= review.comment %></td>
+          <td><%= review.rating %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <div><a href="/product/bobdata">주문자 : bob</a></div>
+    <div><a href="/product/mostexpensive">가장 비싼 것 주문 정보</a></div>
+  </body>
+</html>

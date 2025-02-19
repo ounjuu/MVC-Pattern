@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="tableWrap"></div>
+
+    <script>
+      const tablewrap = document.querySelector(".tableWrap");
+      tablewrap.innerHTML = `<table>
+        <thead>
+        <tr>
+          <th>월</th>
+          <th>화</th>
+          <th>수</th>
+          <th>목</th>
+          <th>금</th>
+          <th>토</th>
+          <th>일</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+
+          <tbody>
+        </table>`;
+
+      const days = [];
+      const firstDay = 6;
+      for (let i = 0; i < 31; i++) {
+        days.push(i);
+      }
+      console.log(days, "??");
+
+      const calender = [];
+      let week = new Array(firstDay).fill(null);
+
+      const tbody = document.querySelector(".tbody");
+      const maketr = document.createAttribute("tr");
+    </script>
+  </body>
+</html>

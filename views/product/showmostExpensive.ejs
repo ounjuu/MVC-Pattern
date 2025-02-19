@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가장 비싼 주문 상세 정보</title>
+  </head>
+  <body>
+    <h1>가장 비싼 주문 상세 정보</h1>
+
+    <!-- 상품 정보 테이블 -->
+    <h2>상품 정보</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>상품 ID</th>
+          <th>상품명</th>
+          <th>카테고리 ID</th>
+          <th>가격</th>
+          <th>평점</th>
+          <th>재고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= mostExpensive.findproductId.id %></td>
+          <td><%= mostExpensive.findproductId.name %></td>
+          <td><%= mostExpensive.findproductId.categoryId %></td>
+          <td><%= mostExpensive.findproductId.price %></td>
+          <td><%= mostExpensive.findproductId.rating %></td>
+          <td><%= mostExpensive.findproductId.stock %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 주문 정보 테이블 -->
+    <h2>주문 정보</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>주문 ID</th>
+          <th>상품 ID</th>
+          <th>사용자 ID</th>
+          <th>수량</th>
+          <th>주문 상태</th>
+          <th>총 결제 금액</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= mostExpensive.ordered.orderId %></td>
+          <td><%= mostExpensive.ordered.productId %></td>
+          <td><%= mostExpensive.ordered.userId %></td>
+          <td><%= mostExpensive.ordered.quantity %></td>
+          <td><%= mostExpensive.ordered.status %></td>
+          <td><%= mostExpensive.ordered.totalAmount %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 주문한 사용자 정보 테이블 -->
+    <h2>주문한 사용자 정보</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>사용자 ID</th>
+          <th>이름</th>
+          <th>이메일</th>
+          <th>나이</th>
+          <th>주소</th>
+          <th>활성 여부</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= mostExpensive.orderuser.id %></td>
+          <td><%= mostExpensive.orderuser.name %></td>
+          <td><%= mostExpensive.orderuser.email %></td>
+          <td><%= mostExpensive.orderuser.age %></td>
+          <td><%= mostExpensive.orderuser.address %></td>
+          <td><%= mostExpensive.orderuser.isActive ? "활성" : "비활성" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

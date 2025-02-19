@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>주문자 밥씨</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>이메일</th>
+          <th>나이</th>
+          <th>주소</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% bobdata.forEach((x) => { %>
+        <tr>
+          <td><%= x.name %></td>
+          <td><%= x.email %></td>
+          <td><%= x.age %></td>
+          <td><%= x.address %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>

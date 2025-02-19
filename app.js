@@ -10,7 +10,7 @@ const climbRouters = require("./routes/climbRoutes");
 const foodRouters = require("./routes/foodRoutes");
 const fruitRouters = require("./routes/fruitRoutes");
 const webRouters = require("./routes/webRoutes");
-
+const productRouters = require("./routes/productRoutes");
 app.use(express.urlencoded({ extended: true }));
 // json 형식으로 받을 것임
 app.use(express.json());
@@ -24,6 +24,7 @@ app.use("/climb", climbRouters);
 app.use("/food", foodRouters);
 app.use("/fruit", fruitRouters);
 app.use("/webtoon", webRouters);
+app.use("/product", productRouters);
 
 // set이 get 위에 와야 함
 app.set("view engine", "ejs"); // ejs 파일 html로 변경해줌
